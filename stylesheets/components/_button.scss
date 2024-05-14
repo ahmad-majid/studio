@@ -1,0 +1,80 @@
+.button {
+  width: 13.75rem;
+  height: 3.44rem;
+
+  background-color: transparent;
+  border: 2px solid $brand-color;
+  outline: none;
+  cursor: pointer;
+
+  @extend %transition;
+
+  &:visited {
+    transform: scale(1);
+    box-shadow: none;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $brand-color;
+    box-shadow: 0.3rem 0.3rem 0.3rem rgba($brand-color, 0.6);
+    transform: scale(.96);
+  }
+
+  &:active {
+    transform: scale(1);
+    box-shadow: none;
+  }
+
+  &_colored,
+  &_active {
+    background-color: $brand-color;
+    color: $bg-color;
+
+    &:focus {
+      transform: scale(1);
+      box-shadow: none;
+      color: $bg-color;
+    }
+  }
+}
+
+.button-light {
+  background-color: $bg-light-theme-color;
+  border: 2px solid $bg-light-theme-color;
+
+  &:hover,
+  &:focus {
+    color: $brand-color;
+    
+    background-color: $text-light-theme-color;
+    border: 2px solid $text-light-theme-color;
+    box-shadow: 0.3rem 0.3rem 0.3rem rgba($text-light-theme-color, 0.6);
+  }
+}
+
+.button_colored-light {
+  color: $text-light-theme-color;
+
+  background-color: $brand-color;
+  border: 2px solid $brand-color;
+}
+
+.button_colored-light {
+  &:hover,
+  &:focus,
+  &:active,
+  &_active {
+    color: $brand-color;
+
+    background-color: $text-light-theme-color;
+    border: 2px solid $brand-color;
+  }
+
+  &_active {
+    &:focus {
+      transform: scale(1);
+      box-shadow: none;
+    }
+  }
+}

@@ -1,0 +1,129 @@
+.contacts {
+  width: 100%;
+  height: 43.75rem;
+  margin: 0 auto;
+  padding-top: 3.75rem;
+  padding-right: 1.25rem;
+
+  background: url(../assets/img/dark-theme/hero-additional-photo.jpg) 50% 50% no-repeat;
+  background-size: auto 700px;
+
+  @include media-tablet-portrait {
+    height: 37.5rem;
+    background-size: cover;
+    padding: 4.5rem 0 0;
+  }
+
+  @include media-phone {
+    background-position: 15% 0;
+  }
+}
+
+.contacts-light {
+  background-image: url(../assets/img/light-theme/hero-additional-photo-light.jpg);
+}
+
+.container-contacts {
+  display: flex;
+  flex-direction: column;
+  align-items:flex-end;
+
+  padding-left: 10px;
+  padding-right: 10px;
+
+
+  @include media-tablet-portrait {
+    align-items: center;
+  }
+}
+
+.form-section {
+  width: 28.12rem;
+  height: 28.12rem;
+
+  @include media-phone {
+    width: 90%;
+  }
+}
+
+.last-section-title {
+  margin: 0;
+
+  @include media-tablet-portrait {
+    text-align: center;
+  }
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 2.5rem;
+
+  @include media-tablet-portrait {
+    align-items: center;
+    margin-top: 3.25rem;
+  }
+
+  &>input,
+  &>textarea {
+    width: 100%;
+    margin-bottom: 1.2rem;
+    padding: 0 1.125rem;
+
+    font: $conact-form-font;
+    color: $text-color;
+
+    background-color: rgba($bg-color, 0.5);
+    border: 2px solid $brand-color;
+    caret-color: $text-color;
+
+    resize: none;
+    @extend %transition;
+
+    &::placeholder {
+      font: $conact-form-font;
+      color: $brand-color;
+    }
+
+    &:focus {
+      color: $text-color;
+
+      outline: 1px solid $text-color;
+      box-shadow: 0.4rem 0.4rem 0.5rem rgba($brand-color, 0.6);
+
+      &::placeholder {
+        color: $text-color;
+      }
+    }
+  }
+
+  &>textarea {
+    height: 100px;
+    margin-bottom: 1.9rem;
+  }
+}
+
+.contact-form-light {
+  &>input,
+  &>textarea {
+    color: $text-light-theme-color;
+
+    background-color: rgba($bg-light-theme-color, 0.5);
+    caret-color: $text-light-theme-color;
+
+    &::placeholder {
+      color: $text-light-theme-color;
+    }
+
+    &:focus {
+    color: $text-light-theme-color;
+    outline: none;
+    box-shadow: 0.4rem 0.4rem 0.5rem rgba($text-light-theme-color, 0.6);
+
+      &::placeholder {
+        color: $brand-color;
+      }
+    }
+  }
+}

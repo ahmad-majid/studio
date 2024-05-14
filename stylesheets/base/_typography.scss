@@ -1,0 +1,135 @@
+/**
+ * Basic typography style for copy text
+ */
+.body {
+  font: $text-font;
+  color: $text-color;
+}
+
+.body-light {
+  color: $text-light-theme-color;
+
+  & li,
+  & a {
+    color: $text-light-theme-color;
+  }
+
+   & a:hover {
+    color: $brand-color;
+    text-shadow: 1px 1px 2px rgba($bg-light-theme-color, 1)
+  }
+}
+
+.nav-list {
+  font: $navigation-font;
+}
+
+.language-switcher {
+  font: $text-bold-font;
+}
+
+.language-switcher_en,
+.language-switcher_ru,
+.theme-switcher {
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $brand-color;
+  }
+}
+
+.nav-list {
+  @include media-tablet-portrait {
+    font: $mobile-navigation-font;
+  }
+}
+
+.nav-link-light {
+  &:hover,
+  &:focus,
+  &:active {
+    color: $bg-light-theme-color;
+  }
+}
+
+.hero-title {
+  font: $title-font;
+
+  @include media-tablet-portrait {
+    font: $mobile-title-font;
+  }
+}
+
+.hero-description {
+  font: $button-font;
+
+  @include media-tablet-portrait {
+    line-height: 1.5rem;
+  }
+}
+
+.button {
+  font: $button-font;
+  color: $brand-color;
+
+  &:hover,
+  &:focus {
+    color: $text-color;
+  }
+
+  &:active {
+    color: $bg-color;
+  }
+}
+
+.button_colored {
+  color: $bg-color;
+}
+
+.section-title,
+.last-section-title {
+  font: $section-title-font;
+  color: $brand-color;
+
+  @include media-tablet-portrait {
+    font: $mobile-section-title-font;
+  }
+}
+
+.skill-description_title {
+  font: $text-bold-font;
+}
+
+.price-list {
+
+  &__card-title {
+    font: $section-subtitle-font;
+  }
+
+  &__card-price {
+    font: $price-font;
+    color: $brand-color;
+  }
+}
+
+.footer {
+  font: $navigation-font;
+}
+
+
+.nav-link-light,
+.section-title-light,
+.skill-description-light,
+.card-price-light {
+  color: $text-light-theme-color;
+}
+
+.active-link,
+.text-gold {
+  color: $brand-color;
+}
+
+.active-link {
+  text-shadow: 1px 1px 2px rgba($bg-light-theme-color, 1)
+}

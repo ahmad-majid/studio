@@ -1,0 +1,36 @@
+.galleries-list {
+  @extend %flex-centered-justify;
+  flex-wrap: wrap;
+  gap: 0.31rem;
+
+  @include media-tablet-portrait {
+    margin: 2rem;
+    padding: 0.3rem;
+  }
+}
+
+.portfolio-gallery {
+  @extend %flex-centered-justify;
+  flex-wrap: wrap;
+  gap: 1.56rem;
+  margin: 3.75rem auto 0;
+
+  @include media-tablet-portrait {
+    margin: 3.5rem auto 0;
+  }
+}
+
+.gallery-image {
+  max-width: 450px;
+  max-height: 560px;
+
+  @include media-phone {
+    width: 90%;
+    height: 90%
+  }
+
+  @include media-iphone5 {
+    width: 297px;
+    height: 370px;
+  }
+}

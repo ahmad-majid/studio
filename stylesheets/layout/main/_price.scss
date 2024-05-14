@@ -1,0 +1,60 @@
+.price-list {
+  @extend %flex-centered-justify;
+  flex-wrap: wrap;
+  row-gap: 3.12rem;
+  column-gap: 1.56rem;
+  margin-bottom: 6.25rem;
+
+  @include media-tablet-portrait {
+    row-gap: 2.85rem;
+    margin-bottom: 5rem;
+  }
+
+  &__card {
+    width: 28.12rem;
+    height: 31.56rem;
+
+    text-align: center;
+
+    border: 3px solid $brand-color;
+
+    &-title {
+      margin: 2.6rem auto 0;
+
+      @include media-iphone5 {
+        margin: 1.6rem auto 0;
+      }
+    }
+
+    @include media-tablet-portrait {
+      width: 26.25rem;
+      height: 31.56rem;
+      margin-top: 0.3rem;
+    }
+
+    @include media-iphone5 {
+      width: 24rem;
+      height: 28rem;
+    }
+  }
+}
+
+.price-list__card-price {
+  margin: 1.2rem auto;
+
+  @include media-tablet-portrait {
+    margin: 1.25rem auto;
+  }
+
+  @include media-iphone5 {
+    margin: 0.8rem auto;
+  }
+}
+
+.service-list {
+  margin-bottom: 2.5rem;
+
+  @include media-iphone5 {
+    margin-bottom: 1.6rem;
+  }
+}
